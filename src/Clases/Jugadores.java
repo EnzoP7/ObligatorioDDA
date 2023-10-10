@@ -4,20 +4,16 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Jugadores extends  Persona{
-
     private int Elo,Edad;
 
+// region Constructor Lista TOSTRING(datos)
+
     public static ArrayList<Jugadores> listaJugadores = new ArrayList<>();
-
-
-
     public Jugadores( String nombre, String apellido, String pais, int partidos, int elo, int edad) {
         super(nombre, apellido, pais, partidos);
         Elo = elo;
         Edad = edad;
     }
-
-
     public  void  datos() {
         System.out.println("Jugadores{" +
                 "id=" + this.getId() +
@@ -31,8 +27,7 @@ public class Jugadores extends  Persona{
                 '}');
     }
 
-
-
+// endregion
 
     // region METODOS
 
@@ -161,8 +156,6 @@ public static boolean jugoPartida(int id){
 
     }
 
-    // endregion
-
     public static void verListaDeJugadores(){
 
         if (listaJugadores.isEmpty()){
@@ -175,6 +168,8 @@ public static boolean jugoPartida(int id){
             elPlayer.datos();
         }
     }
+
+    // endregion
 
     // region GET Y SETERS
     public int getElo() {

@@ -7,8 +7,11 @@ public class Persona {
     private int id,Partidos;
     private String Nombre,Apellido,Pais;
 
-    public static ArrayList<Persona> listaPersonas = new ArrayList<>();
 
+
+    // region CONSTRUCTOR LISTA TOSTRING
+
+    public static ArrayList<Persona> listaPersonas = new ArrayList<>();
     public Persona( String nombre, String apellido, String pais,int partidos) {
         this.id = generadorDeId();
         Nombre = nombre;
@@ -17,12 +20,6 @@ public class Persona {
         this.Partidos = partidos;
     }
 
-    public static void verPagos(){
-        System.out.println(" ");
-    }
-    public int generadorDeId(){
-        return listaPersonas.size()+1;
-    }
     @Override
     public String toString() {
         return "Persona{" +
@@ -34,6 +31,19 @@ public class Persona {
                 '}';
     }
 
+
+    // endregion
+
+    // region METODOS
+    public static void verPagos(){
+        System.out.println(" ");
+    }
+    public int generadorDeId(){
+        return listaPersonas.size()+1;
+    }
+
+
+    // endregion
 
     // region GET Y SETERS
     public int getId() {

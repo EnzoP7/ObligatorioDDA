@@ -8,14 +8,14 @@ import java.util.Scanner;
 
 public class Partida {
 
-    private int id;
+    private int id,tipoPartida;
     private Jugadores jugador1,jugador2,ganador;
     private Arbitro arbitro;
-
     private String fecha;
 
-    private int tipoPartida;
 
+    // region CONSTRUCTOR , LISTA  Y TOSTRING
+    public static ArrayList<Partida> listaPartidas = new ArrayList<>();
     public Partida( Jugadores jugador1, Jugadores jugador2, Arbitro arbitro, String fecha, int tipoPartida,Jugadores ganador) {
         this.id = generarId();
         this.jugador1 = jugador1;
@@ -38,11 +38,7 @@ public class Partida {
                 ", Ganador=" + ganador.getNombre()+" "+ganador.getApellido()  +
                 '}';
     }
-
-    public static ArrayList<Partida> listaPartidas = new ArrayList<>();
-
-
-
+// endregion
 
     // region METODOS
     public static int generarId(){
@@ -195,8 +191,44 @@ public class Partida {
         }
         if (laPartida.jugador1 == laPartida.jugador2) return false;
         return true;
+
+
+
     }
+
+
+    public  static  Partida buscarPartida(int pid){
+        for (Partida laPartida:listaPartidas){
+            if (laPartida.getId()== pid){
+
+                return laPartida;
+            }
+
+        }
+        return null;
+    }
+
+    public static void verListaDePartidas(){
+        if (listaPartidas.isEmpty()){
+            System.out.println("NO HAY NINGUNA PARTIDA REGISTRADA");
+            return;
+        }
+        else {
+            try {
+                System.out.println("----------------------- LISTA DE PARTIDAS ----------------------");
+                for (Partida laPartida:listaPartidas){
+                    System.out.println(laPartida.toString());
+                }
+            }catch (Exception e)
+            {
+                System.out.println(e);
+            }
+        }
+    }
+
     //endregion
+
+    // region ALTA Y MODIFICAR
     public static void altaPartida(){
 
         if (Jugadores.listaJugadores.size() < 2 || Arbitro.listaArbitros.isEmpty()){
@@ -280,34 +312,7 @@ public class Partida {
 
     }
 
-    public  static  Partida buscarPartida(int pid){
-        for (Partida laPartida:listaPartidas){
-            if (laPartida.getId()== pid){
-
-                return laPartida;
-            }
-
-        }
-        return null;
-    }
-
-    public static void verListaDePartidas(){
-        if (listaPartidas.isEmpty()){
-            System.out.println("NO HAY NINGUNA PARTIDA REGISTRADA");
-            return;
-        }
-        else {
-            try {
-                System.out.println("----------------------- LISTA DE PARTIDAS ----------------------");
-                for (Partida laPartida:listaPartidas){
-                    System.out.println(laPartida.toString());
-                }
-            }catch (Exception e)
-            {
-                System.out.println(e);
-            }
-        }
-    }
+    //endregion
 
 
 

@@ -8,7 +8,7 @@ public class Arbitro extends Persona{
 
     private int NivelDeCertificacion ;
 
-
+// region Constructor Lista  TOSTRING(datos)
     public static ArrayList<Arbitro> listaArbitros = new ArrayList<>();
     public Arbitro( String nombre, String apellido, String pais, int partidos, int nivelDeCertificacion) {
         super( nombre, apellido, pais, partidos);
@@ -27,6 +27,7 @@ public class Arbitro extends Persona{
                 '}');
     }
 
+    //endregion
     // region ABM
     public  static void altaArbitro(){
         Scanner scanner = new Scanner(System.in);
@@ -127,7 +128,7 @@ public class Arbitro extends Persona{
 
     // endregion
 
-
+// region METODOS
 
     public static void verPagos() {
         System.out.println("--------------------- PAGOS A Arbitros --------------------------------------");
@@ -158,7 +159,7 @@ public class Arbitro extends Persona{
             elArbitro.datos();
         }
     }
-
+    //endregion
 
     // region GET Y SETERS
     public int getNivelDeCertificacion() {

@@ -39,7 +39,7 @@ public class Main {
         Arbitro.listaArbitros.add(arbitro3);
 
 
-//        Partida laPartida = new Partida(Jugador1,Jugador2,arbitro3,"20-06-2023",1,Jugador1);
+//        Partida laPartida = new Partida(Jugador1,Jugador2,arbitro3,"20-06-2023",1,Jugador2);
 //        Partida.listaPartidas.add(laPartida);
 
 
@@ -64,6 +64,8 @@ public class Main {
 
             System.out.println("--------------------------------------------  Opciones Partida  ---------------------------------------------");
             System.out.println("9 Ingresar Partida  \t 10 Modificar Partida \t  11 Lista de Partida \n");
+
+            System.out.println("--------------------------------------------  Opciones EXTRA  ---------------------------------------------");
 
             System.out.println("12 Ver Partidas de un Jugador \t  13 Ver Partidas de una Fecha  \t 14 Ver Pagos \n");
 
@@ -106,7 +108,7 @@ public class Main {
                         Partida.altaPartida();
                         break;
                     case 10:
-                        Partida.altaPartida();
+                        Partida.updatePartida();
                         break;
                     case 11:
                         Partida.verListaDePartidas();

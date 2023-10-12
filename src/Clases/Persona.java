@@ -20,6 +20,7 @@ public class Persona {
         this.Partidos = partidos;
     }
 
+    
     @Override
     public String toString() {
         return "Persona{" +

@@ -1,10 +1,13 @@
 JUGADORES
-Persona{id=1, Nombre='Enzo', Apellido='Pontet', Pais='Uruguay', Partidos='44'}
-Persona{id=2, Nombre='Lucas', Apellido='Chambon', Pais='Argentina', Partidos='100'}
-Persona{id=3, Nombre='Luis', Apellido='Aquino', Pais='Peru', Partidos='212'}
-Persona{id=4, Nombre='Maxi', Apellido='Colman', Pais='Chileno', Partidos='10'}
+Jugador{id=1, Nombre='Enzo', Apellido='Pontet', Pais='Uruguay', Partidos=45, Elo=212, Edad=22}
+Jugador{id=2, Nombre='Lucas', Apellido='Chambon', Pais='Argentina', Partidos=101, Elo=88, Edad=32}
+Jugador{id=3, Nombre='Luis', Apellido='Aquino', Pais='Peru', Partidos=212, Elo=1921, Edad=66}
+Jugador{id=4, Nombre='Maxi', Apellido='Colman', Pais='Chileno', Partidos=10, Elo=30, Edad=20}
 ÁRBITROS
-Persona{id=5, Nombre='Gustavo', Apellido='Erramuspe', Pais='Paraguay', Partidos='2'}
-Persona{id=6, Nombre='Agustin', Apellido='Maciel', Pais='Venezolano', Partidos='100'}
-Persona{id=7, Nombre='Alen', Apellido='Lopez', Pais='Uruguay', Partidos='33'}
+Arbitro{id=5, Nombre='Gustavo', Apellido='Erramuspe', Pais='Erramuspe', Partidos=2, NivelDeCertificacion=1}
+Arbitro{id=6, Nombre='Agustin', Apellido='Maciel', Pais='Maciel', Partidos=100, NivelDeCertificacion=2}
+Arbitro{id=7, Nombre='Alen', Apellido='Lopez', Pais='Lopez', Partidos=33, NivelDeCertificacion=3}
 PARTIDAS
+Partida{id=1, jugador1=1, jugador2=2, arbitro=7, fecha='25', tipoPartida=1, Ganador=1}
+REGISTROS
+RegistroPartidas{id=1, eloJugador1=200, eloJugador2=100, puntos=12}
